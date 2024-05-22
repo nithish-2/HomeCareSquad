@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Base.Theme.HomeCareSquad" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowBackground">@drawable/background_image</item>
+        <item name="buttonStyle">@style/MyButtonStyle</item>
+    </style>
+
+    <style name="MyButtonStyle" parent="Widget.AppCompat.Button">
+        <!-- Set the background color of the button -->
+        <item name="android:background">@color/button_background_color</item>
+        <!-- You can also set other button attributes here -->
+    </style>
+
+    <style name="Theme.HomeCareSquad" parent="Base.Theme.HomeCareSquad"/>
+</resources>

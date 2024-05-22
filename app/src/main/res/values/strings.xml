@@ -1,0 +1,58 @@
+<resources>
+    <!-- Home Page -->
+    <string name="app_name">HomeCareSquad</string>
+    <string name="welcome_message">Welcome to HomeCareSquad!</string>
+    <string name="login_button">Login</string>
+    <string name="signup_button">Sign Up</string>
+    <string name="submit_button">Submit</string>
+    <string name="logout_button">Logout</string>
+
+    <!-- Login Page -->
+    <string name="login_header">Login</string>
+    <string name="email_hint">Email OR Username</string>
+    <string name="password_hint">Password</string>
+    <string name="signup_here">Don\'t have an account? Sign up here</string>
+
+    <!-- Sign Up Page -->
+    <string name="signup_header">Sign Up</string>
+    <string name="name_hint">Username</string>
+    <string name="confirm_password_hint">Confirm Password</string>
+    <string name="login_here">Already have an account? Login here</string>
+
+    <!-- Service Details Page -->
+    <string name="basic_cost_format">Basic Cost: $%.2f</string>
+    <string name="standard_cost_format">Standard Cost: $%.2f</string>
+    <string name="premium_cost_format">Premium Cost: $%.2f</string>
+
+    <!-- Appointment Page -->
+    <string name="service_name_header">Service Name</string>
+    <string name="appointment_available">Appointments are available only from tomorrow 9am to 6pm</string>
+    <string name="select_date">Select Date</string>
+    <string name="selected_date">Selected Date</string>
+    <string name="select_time">Select Time</string>
+    <string name="selected_time">Selected Time</string>
+    <string name="proceed_to_payment">Proceed to Payment</string>
+
+    <!-- Confirmation Page -->
+    <string name="appointment_confirmation">Your appointment has been scheduled successfully</string>
+    <string name="technician_name">Technician Name:</string>
+    <string name="technician_james">James Thomas</string>
+    <string name="technician_contact">Technician Contact:</string>
+    <string name="technician_james_contact">123-456-7890</string>
+    <string name="thanks_message">Thanks for choosing HomeCareSquad!</string>
+
+    <!-- Payment Page -->
+    <string name="payment_details">Payment Details</string>
+    <string name="card_number_hint">Card Number</string>
+    <string name="expiry_month_hint">MM</string>
+    <string name="expiry_year_hint">YY</string>
+    <string name="CVV_hint">CVV</string>
+    <string name="card_holder_name">Card Holder Name</string>
+    <string name="confirm_appointment">Confirm Appointment</string>
+
+    <!-- Service Details Adapter Page -->
+    <string name="basic_cost">Basic Cost: $0</string>
+    <string name="standard_cost">Standard Cost: $0</string>
+    <string name="premium_cost">Premium Cost: $0</string>
+
+</resources>

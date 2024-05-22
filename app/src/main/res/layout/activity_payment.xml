@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".PaymentActivity">
+
+        <!-- Logo -->
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="90dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toTopOf="@id/paymentTextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/homecaresquad" />
+
+        <!-- Payment TextView -->
+        <TextView
+            android:id="@+id/paymentTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/payment_details"
+            app:layout_constraintTop_toBottomOf="@id/logo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="16dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:gravity="center"
+            />
+
+        <!-- Card Number Field -->
+        <EditText
+            android:id="@+id/cardNumberField"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:inputType="number"
+            android:hint="@string/card_number_hint"
+            android:textSize="10sp"
+            android:textColorHint="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/paymentTextView" />
+
+        <!-- Expiration Date Layout -->
+        <LinearLayout
+            android:id="@+id/expirationLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:textColorHint="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardNumberField">
+
+            <!-- Month Field -->
+            <EditText
+                android:id="@+id/monthField"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:ems="2"
+                android:inputType="number"
+                android:textColorHint="@color/white"
+                android:textStyle="bold"
+                android:hint="@string/expiry_month_hint"
+                android:textSize="10sp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#D3D3D3"/>
+
+            <!-- Year Field -->
+            <EditText
+                android:id="@+id/yearField"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:ems="2"
+                android:inputType="number"
+                android:hint="@string/expiry_year_hint"
+                android:textSize="10sp"
+                android:textColorHint="@color/white"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <!-- CVV Field -->
+        <EditText
+            android:id="@+id/cvvField"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="10dp"
+            android:ems="3"
+            android:inputType="number"
+            android:hint="@string/CVV_hint"
+            android:textSize="10sp"
+            android:textColorHint="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/expirationLayout" />
+
+        <!-- Card Holder Name Field -->
+        <EditText
+            android:id="@+id/cardHolderNameField"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:hint="@string/card_holder_name"
+            android:inputType="text"
+            android:textSize="10sp"
+            android:textColorHint="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cvvField" />
+
+        <!-- Confirm Appointment Button -->
+        <Button
+            android:id="@+id/confirmAppointmentButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/confirm_appointment"
+            app:layout_constraintTop_toBottomOf="@+id/cardHolderNameField"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/black"/>
+
+        <!-- Confirmation Message TextView -->
+        <TextView
+            android:id="@+id/confirmationMessageTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="16sp"
+            android:textColor="@android:color/holo_green_dark"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/confirmAppointmentButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"
+            android:visibility="gone" />
+
+        <!-- Circular Progress View -->
+        <ProgressBar
+            android:id="@+id/circularProgressView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminate="true"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/confirmAppointmentButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
